@@ -1,7 +1,16 @@
+using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class HelloWorld : MonoBehaviour
 {
+
+    enum ProjectileKind
+    {
+        Arrow,
+        Bullet,
+        Missile
+    }
     void Start()
     {
         int x = 0;
@@ -51,5 +60,45 @@ public class HelloWorld : MonoBehaviour
                 break;
 
         }
+
+        // 배열
+        int[] arr = new int[3] {1, 2, 3 }; // C# 배열은 객체다
+
+        // 2차원 배열
+        int[,] arr2 = new int[4, 6];
+
+        // List
+        List<string> names = new List<string>(5);
+        names.Add("James"); // 뒤에 추가
+        names.Insert(0, "hong"); // index에 추가
+        names.RemoveAt(1);
+        names.Remove("James");
+        for (int i = 0; i < names.Count; i++) // .Count
+        {
+
+        }
+
+        Debug.Log(names.Contains("hong")); // 있으면 true
+        Debug.Log(names.IndexOf("hong")); // 있으면 index 출력 없으면 -1
+        names.Clear(); // 지우기
+
+
+        // 딕셔너리(키 : 값)
+        Dictionary<string, string> cities = new Dictionary<string, string>();
+        // Add
+        Debug.Log(cities.ContainsKey("키")); // 키 있으면 true
+        Debug.Log(cities.ContainsValue("값")); // 값 있으면 true
+
+        // foreach  
+        int[] arr3 = new int[3] { 1, 2, 3 };
+        foreach (int numer in arr3)
+        {
+
+
+        }
+
+        // call by reference
+        
+
     }
 }
