@@ -24,5 +24,15 @@ public class HelloWorld : MonoBehaviour
         string t = "hijkl";
 
         Debug.Log(s + t);
+
+        // ?? : null 값이면 다음거 실행
+        string str = null;
+        string str2 = "abc";
+        string str3 = str ?? str2; // str이 null 이라면 str2
+        Debug.Log(str3);
+
+        // ??= str이 null 인경우 다음 값을 넣는다
+        str3 = str ??= str2;
+        Debug.Log(str3);
     }
 }
