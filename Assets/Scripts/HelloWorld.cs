@@ -34,5 +34,22 @@ public class HelloWorld : MonoBehaviour
         // ??= str이 null 인경우 다음 값을 넣는다
         str3 = str ??= str2;
         Debug.Log(str3);
+
+
+        // switch문
+        string groupName = "카라";
+        switch (groupName)
+        {
+            case "르세라핌":
+                Debug.Log("르세라핌");
+                break;
+            case "뉴진스":
+                Debug.Log("뉴진스");
+                break;
+            case "카라":
+                Debug.Log("카라");
+                break;
+
+        }
     }
 }
